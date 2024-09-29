@@ -27,8 +27,7 @@ const About = () => {
                         <div>
                             <p className="grid-headtext">Hi, I'm Gazi</p>
                             <p className="grid-subtext">
-                                With years of experience, I have honed my skills in both frontend and backend
-                                development, creating dynamic and responsive websites.
+                                With years of experience, I have honed my skills in both frontend and backend development, creating dynamic and responsive websites.
                             </p>
 
                         </div>
@@ -37,7 +36,7 @@ const About = () => {
 
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain"/>
+                        <img src="/assets/grid22.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain"/>
 
                         <div>
                             <p className="grid-headtext">Tech Stack</p>

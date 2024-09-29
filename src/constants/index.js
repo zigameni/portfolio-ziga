@@ -58,193 +58,113 @@ export const clientReviews = [
 
 export const myProjects = [
     {
-        title: 'Podcastr - AI Podcast Platform',
-        desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+        title: 'MERN Stack Art Management System',
+        desc: 'A full-stack application designed to manage art collections and exhibits for the Udruženje Likovnih Umetnika Srbije, providing a streamlined process for administrators and guests.',
         subdesc:
-            'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-        href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-        texture: '/textures/project/project1.mp4',
-        logo: '/assets/project-logo1.png',
+            'Developed using MongoDB, Express.js, React, and Node.js, the platform includes RESTful APIs for efficient data management and a user-friendly interface for easy interaction.',
+        href: 'https://www.vusbaza.net', // example link, modify as needed
+        texture: '/textures/project/project1.mp4', // placeholder texture path
+        logo: '/assets/ulus.png', // placeholder logo path
         logoStyle: {
-            backgroundColor: '#2A1816',
-            border: '0.2px solid #36201D',
-            boxShadow: '0px 0px 60px 0px #AA3C304D',
+            backgroundColor: '#1F1A1B',
+            border: '0.2px solid #262122',
+            boxShadow: '0px 0px 60px 0px #B34D3C4D',
         },
-        spotlight: '/assets/spotlight1.png',
+        spotlight: '/assets/spotlight1.png', // placeholder spotlight path
         tags: [
             {
                 id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
+                name: 'MongoDB',
+                path: '/assets/mongodb.svg', // placeholder MongoDB icon
             },
             {
                 id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwindcss.png',
+                name: 'Express.js',
+                path: '/assets/express.png', // placeholder Express.js icon
             },
             {
                 id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
+                name: 'React.js',
+                path: '/assets/react.svg', // existing React icon
             },
             {
                 id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
+                name: 'Node.js',
+                path: '/assets/nodejs-2.svg', // placeholder Node.js icon
             },
         ],
     },
     {
-        title: 'LiveDoc - Real-Time Google Docs Clone',
-        desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
+        title: 'BOOKTOPIA – Bookstore',
+        desc: 'A personal project developed to create an online bookstore with user authentication, shopping cart functionality, and secure payment processing using Django and Python.',
         subdesc:
-            'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-        href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-        texture: '/textures/project/project2.mp4',
-        logo: '/assets/project-logo2.png',
+            'Built using Django framework and MySQL database, this project showcases an e-commerce platform designed for seamless user experience and secure transactions.',
+        href: 'https://github.com/zigameni/booktopia', // example link, modify as needed
+        texture: '/textures/project/project2.mp4', // placeholder texture path
+        logo: '/assets/booktopia.png', // placeholder logo path
         logoStyle: {
-            backgroundColor: '#13202F',
-            border: '0.2px solid #17293E',
-            boxShadow: '0px 0px 60px 0px #2F6DB54D',
+            backgroundColor: '#2E2A26',
+            border: '0.2px solid #2D2C24',
+            boxShadow: '0px 0px 60px 0px #886C584D',
         },
-        spotlight: '/assets/spotlight2.png',
+        spotlight: '/assets/spotlight2.png', // placeholder spotlight path
         tags: [
             {
                 id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
+                name: 'Django',
+                path: '/assets/django.png', // placeholder Django icon
             },
             {
                 id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwindcss.png',
+                name: 'Python',
+                path: '/assets/python.svg', // placeholder Python icon
             },
             {
                 id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
-            },
-            {
-                id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
+                name: 'MySQL',
+                path: '/assets/mysql.png', // placeholder MySQL icon
             },
         ],
     },
     {
-        title: 'CarePulse - Health Management System',
-        desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+        title: 'Operating System Kernel for RISC-V Architecture',
+        desc: 'A custom operating system kernel developed for the RISC-V architecture, tested using the QEMU emulator for ensuring compatibility and performance.',
         subdesc:
-            'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-        href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-        texture: '/textures/project/project3.mp4',
-        logo: '/assets/project-logo3.png',
+            'This project involved the development of an OS kernel using C/C++ and RISC-V assembly, showcasing low-level system programming and architecture-specific development skills.',
+        href: 'https://github.com/zigameni/riscv-kernel', // example link, modify as needed
+        texture: '/textures/project/project3.mp4', // placeholder texture path
+        logo: '/assets/risc-v.png', // placeholder logo path
         logoStyle: {
-            backgroundColor: '#60f5a1',
-            background:
-                'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
-            border: '0.2px solid rgba(208, 213, 221, 1)',
-            boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+            backgroundColor: '#2A2E3B',
+            border: '0.2px solid #2B3C4D',
+            boxShadow: '0px 0px 60px 0px #546F8D4D',
         },
-        spotlight: '/assets/spotlight3.png',
+        spotlight: '/assets/spotlight3.png', // placeholder spotlight path
         tags: [
             {
                 id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
+                name: 'C++',
+                path: '/assets/c.svg', // placeholder C/C++ icon
             },
             {
                 id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwindcss.png',
+                name: 'C++',
+                path: '/assets/cpp.svg', // placeholder C/C++ icon
             },
             {
                 id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
+                name: 'RISC-V',
+                path: '/assets/risc-v.svg', // placeholder RISC-V icon
             },
             {
                 id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
-            },
-        ],
-    },
-    {
-        title: 'Horizon - Online Banking Platform',
-        desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-        subdesc:
-            'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-        href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-        texture: '/textures/project/project4.mp4',
-        logo: '/assets/project-logo4.png',
-        logoStyle: {
-            backgroundColor: '#0E1F38',
-            border: '0.2px solid #0E2D58',
-            boxShadow: '0px 0px 60px 0px #2F67B64D',
-        },
-        spotlight: '/assets/spotlight4.png',
-        tags: [
-            {
-                id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
-            },
-            {
-                id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwindcss.png',
-            },
-            {
-                id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
-            },
-            {
-                id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
-            },
-        ],
-    },
-    {
-        title: 'Imaginify - AI Photo Manipulation App',
-        desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-        subdesc:
-            'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-        href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-        texture: '/textures/project/project5.mp4',
-        logo: '/assets/project-logo5.png',
-        logoStyle: {
-            backgroundColor: '#1C1A43',
-            border: '0.2px solid #252262',
-            boxShadow: '0px 0px 60px 0px #635BFF4D',
-        },
-        spotlight: '/assets/spotlight5.png',
-        tags: [
-            {
-                id: 1,
-                name: 'React.js',
-                path: '/assets/react.svg',
-            },
-            {
-                id: 2,
-                name: 'TailwindCSS',
-                path: 'assets/tailwindcss.png',
-            },
-            {
-                id: 3,
-                name: 'TypeScript',
-                path: '/assets/typescript.png',
-            },
-            {
-                id: 4,
-                name: 'Framer Motion',
-                path: '/assets/framer.png',
+                name: 'QEMU',
+                path: '/assets/qemu.svg', // placeholder QEMU icon
             },
         ],
     },
 ];
+
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
@@ -260,29 +180,34 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
     {
         id: 1,
-        name: 'Framer',
-        pos: 'Lead Web Developer',
-        duration: '2022 - Present',
-        title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-        icon: '/assets/framer.svg',
-        animation: 'victory',
+        name: 'Udruženje Likovnih Umetnika Srbije (ULUS)',
+        pos: 'Full Stack Developer (MERN Stack)',
+        duration: 'December 2023 - June 2024',
+        title: `Developed a full-stack application using MongoDB, Express.js, React, and Node.js. 
+        Designed and implemented RESTful APIs for data management. Created a user-friendly frontend interface 
+        for administrators and guests.`,
+        icon: '/assets/react.svg',  // Assuming you have a logo or icon for ULUS
+        animation: 'victory',  // You can change this if needed
     },
     {
         id: 2,
-        name: 'Figma',
-        pos: 'Web Developer',
-        duration: '2020 - 2022',
-        title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-        icon: '/assets/figma.svg',
-        animation: 'clapping',
+        name: 'Levi9 Technology Services d.o.o.',
+        pos: 'DevOps Engineering Intern',
+        duration: 'September 2023 - December 2023',
+        title: `Developed CloudFormation templates for AWS services including DynamoDB and Lambda. 
+        Implemented CI/CD pipelines using Bitbucket and GitLab. Gained experience with Docker and Kubernetes for 
+        application containerization and orchestration. Applied DevOps principles to improve software development automation.`,
+        icon: '/assets/docker.svg',  // Assuming you have a logo or icon for Levi9
+        animation: 'clapping',  // You can change this if needed
     },
     {
         id: 3,
-        name: 'Notion',
-        pos: 'Junior Web Developer',
-        duration: '2019 - 2020',
-        title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-        icon: '/assets/notion.svg',
-        animation: 'salute',
+        name: 'Luxoft d.o.o',
+        pos: 'GPU Computing and Embedded Electronics Intern',
+        duration: 'March 2023 - June 2023',
+        title: `Optimized GPU algorithms, resulting in a 40% improvement in processing speed for complex computational tasks. 
+        Developed using efficient coding techniques for embedded systems.`,
+        icon: '/assets/circuit.svg',  // Assuming you have a logo or icon for Luxoft
+        animation: 'salute',  // You can change this if needed
     },
 ];
