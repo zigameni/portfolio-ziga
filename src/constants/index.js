@@ -63,7 +63,7 @@ export const myProjects = [
         subdesc:
             'Developed using MongoDB, Express.js, React, and Node.js, the platform includes RESTful APIs for efficient data management and a user-friendly interface for easy interaction.',
         href: 'https://www.vusbaza.net', // example link, modify as needed
-        texture: '/textures/project/project1.mp4', // placeholder texture path
+        texture: '/textures/project/ulus.mp4', // placeholder texture path
         logo: '/assets/ulus.png', // placeholder logo path
         logoStyle: {
             backgroundColor: '#1F1A1B',
@@ -100,7 +100,7 @@ export const myProjects = [
         subdesc:
             'Built using Django framework and MySQL database, this project showcases an e-commerce platform designed for seamless user experience and secure transactions.',
         href: 'https://github.com/zigameni/booktopia', // example link, modify as needed
-        texture: '/textures/project/project2.mp4', // placeholder texture path
+        texture: '/textures/project/booktopia.mp4', // placeholder texture path
         logo: '/assets/booktopia.png', // placeholder logo path
         logoStyle: {
             backgroundColor: '#2E2A26',
@@ -182,7 +182,7 @@ export const workExperiences = [
         id: 1,
         name: 'Udruženje Likovnih Umetnika Srbije (ULUS)',
         pos: 'Full Stack Developer (MERN Stack)',
-        duration: 'December 2023 - June 2024',
+        duration: 'December 2023 - August 2024',
         title: `Developed a full-stack application using MongoDB, Express.js, React, and Node.js. 
         Designed and implemented RESTful APIs for data management. Created a user-friendly frontend interface 
         for administrators and guests.`,
@@ -193,7 +193,7 @@ export const workExperiences = [
         id: 2,
         name: 'Levi9 Technology Services d.o.o.',
         pos: 'DevOps Engineering Intern',
-        duration: 'September 2023 - December 2023',
+        duration: 'October 2023 - November 2023',
         title: `Developed CloudFormation templates for AWS services including DynamoDB and Lambda. 
         Implemented CI/CD pipelines using Bitbucket and GitLab. Gained experience with Docker and Kubernetes for 
         application containerization and orchestration. Applied DevOps principles to improve software development automation.`,
