@@ -56,6 +56,10 @@ and optional content polish (project links, education/languages, contact form).
 - Document title aligned to "Software engineer" before committing (2026-11-04).
 - Redesign committed and pushed (`29ec432`), followed by the log commit (`01ac371`); the initial
   commit messages were rewritten to remove the Codebuff co-author trailer (2026-11-04).
+- `AGENTS.md` now carries a non-negotiable no-AI-attribution commit rule (§21) and a matching
+  end-of-response checklist item (2026-11-04).
+- Vercel build failure addressed at repo level: `package.json` now declares `engines.node` `26.x`
+  (Vercel's Node 20 is discontinued; its docs say `engines` overrides the project setting).
 
 ## In Progress
 
@@ -66,6 +70,7 @@ and optional content polish (project links, education/languages, contact form).
 - Add real live/repository links to the project cards (no URLs were provided yet).
 - Decide whether to add education/languages to the Core layout (currently only in the resume).
 - Decide whether the old EmailJS contact form should return inside the new contact section.
+- Verify the Vercel redeploy succeeds on Node 26 after the `engines` change.
 - Optionally delete `prototype/` and `prototype.html` when they are no longer needed.
 
 ## Important Decisions
@@ -85,7 +90,8 @@ and optional content polish (project links, education/languages, contact form).
 
 - `temp/` is not tracked by git; copy any needed file into the project instead of linking it.
 - **Never add AI attribution or co-author trailers** (`Co-Authored-By`, "Generated with ...")
-  to git commits; the user does not want a third party listed as a contributor.
+  to git commits; the user does not want a third party listed as a contributor. Codified as a
+  non-negotiable rule in `AGENTS.md` §21 (2026-11-04).
 - The user asked to use the added skills: `Leonxlnx/taste-skill` and `emilkowalski/skills`
   (design/interaction taste guidance). They are account skills, not files in this repo.
 
@@ -107,6 +113,9 @@ and optional content polish (project links, education/languages, contact form).
 - Project entries have no live/demo URLs, so project cards are not links.
 - Education and languages from the resume are not present in the Core layout.
 - The old EmailJS contact form is no longer rendered.
+- The pre-rewrite commits `338ab3e`/`079856a` remain retrievable on GitHub by direct SHA even
+  though they are not in `main`; GitHub's contributors API lists only `zigameni`. Purging those
+  dangling objects would require GitHub Support.
 - `three-stdlib` lottie `eval` warning and the >500 kB chunk warning remain from existing deps.
 
 ## Relevant Technical Context
@@ -303,6 +312,43 @@ Correction:
 
 GitHub may take time to recompute its contributor list; the old commits are no longer on `main`.
 Going forward, commits in this repo must not include AI attribution or co-author trailers.
+
+## 2026-11-04 22:20
+
+### USER
+
+> add to Agents.md a rule so this does not happen again in the future.
+
+### ASSISTANT
+
+Added `AGENTS.md` §21 "Git Commit Attribution": never add Codebuff/AI/bot co-author trailers,
+"Generated with" lines, or alter the author/committer identity; commits must use only the user's
+existing identity. Added a matching end-of-response checklist item and cross-referenced the rule
+from the constraints section of this log.
+
+`AGENTS.md` and this log update are left uncommitted.
+
+## 2026-11-04 22:42
+
+### USER
+
+> Reported that GitHub still showed Freebuff/its email in the commit history and contributors
+> list, and pasted the Vercel build failure: Node.js 20.x is discontinued and must be upgraded to
+> 26.x in Project Settings.
+
+### ASSISTANT
+
+Checked GitHub directly:
+- `GET /repos/zigameni/portfolio-ziga/contributors` returns only `zigameni`.
+- `GET /repos/.../commits?per_page=10` shows `518e63d`, `01ac371`, `29ec432` with author and
+  committer `zigmaeni <shehu.meni@gmail.com>` and no Codebuff trailer.
+- The old `079856a` still resolves by SHA and still contains the trailer because GitHub retains
+  unreachable objects after a force-push; it is not part of `main`.
+
+Vercel:
+- The failure is the discontinued Node.js 20 runtime.
+- Per Vercel's docs, `engines.node` in `package.json` overrides the Project Settings version, so
+  `26.x` was added. The next push triggers a new deployment.
 
 ---
 

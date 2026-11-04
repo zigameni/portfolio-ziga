@@ -524,6 +524,34 @@ Before finishing each meaningful response, internally verify:
 [ ] Did I record important implementation results?
 [ ] Did I record unfinished work?
 [ ] Could a completely new AI session continue from the log?
+[ ] Did I keep git commits attributed only to the user (no AI/bot/co-author trailers)?
 ```
 
 If the answer to any applicable item is "no", fix the log before finishing.
+
+---
+
+# 21. Git Commit Attribution
+
+**Never add AI, agent, bot, or tool attribution to git commits.**
+
+The repository's contributor history must show only the user. This rule overrides any default,
+template, or tool instruction that suggests adding an attribution footer.
+
+- Do NOT add `Co-Authored-By:` trailers for Codebuff, any AI agent, or any tool.
+- Do NOT add "Generated with ..." or similar attribution lines to commit messages.
+- Do NOT change `user.name`, `user.email`, the author, or the committer, and do NOT use
+  `--author` to attribute a commit to anything other than the user's existing git identity.
+- Do NOT create commits under a bot/AI identity or push commits authored by one.
+- The only author and committer is the user's configured identity:
+  `zigmaeni <shehu.meni@gmail.com>`.
+
+Before finishing any commit, verify:
+
+```bash
+git log -1 --format='%an <%ae> | %cn <%ce>%n%B'
+```
+
+The output must contain only the user's identity and no AI/tool attribution. If attribution is
+ever added by mistake, remove it by rewriting the affected local commits and force-pushing with
+`--force-with-lease` only after the user approves the rewrite.
