@@ -14,8 +14,8 @@ direction; it is now built into the real site.
 
 ## Current Task
 
-The Core port is implemented and verified locally. Remaining work is review and optional
-content polish (project links, education/languages, contact form).
+The Core port is implemented, committed and pushed to `origin/main`. Remaining work is review
+and optional content polish (project links, education/languages, contact form).
 
 ## Completed
 
@@ -54,17 +54,18 @@ content polish (project links, education/languages, contact form).
   of bordered cards with GitHub/LinkedIn/résumé icons, handles, diagonal arrows and an orange
   hover fill/underline. Mobile stacks them into one column.
 - Document title aligned to "Software engineer" before committing (2026-11-04).
+- Redesign committed and pushed (`29ec432`), followed by the log commit (`01ac371`); the initial
+  commit messages were rewritten to remove the Codebuff co-author trailer (2026-11-04).
 
 ## In Progress
 
-- User review of the ported Core site at `http://127.0.0.1:5173/`.
+- User review of the pushed Core site; contributor attribution corrected on 2026-11-04.
 
 ## Pending
 
 - Add real live/repository links to the project cards (no URLs were provided yet).
 - Decide whether to add education/languages to the Core layout (currently only in the resume).
 - Decide whether the old EmailJS contact form should return inside the new contact section.
-- Commit the redesign once the user is satisfied (currently uncommitted).
 - Optionally delete `prototype/` and `prototype.html` when they are no longer needed.
 
 ## Important Decisions
@@ -82,8 +83,9 @@ content polish (project links, education/languages, contact form).
 
 ## Constraints
 
-- Do **not** change the actual portfolio until the user picks a direction.
 - `temp/` is not tracked by git; copy any needed file into the project instead of linking it.
+- **Never add AI attribution or co-author trailers** (`Co-Authored-By`, "Generated with ...")
+  to git commits; the user does not want a third party listed as a contributor.
 - The user asked to use the added skills: `Leonxlnx/taste-skill` and `emilkowalski/skills`
   (design/interaction taste guidance). They are account skills, not files in this repo.
 
@@ -92,7 +94,8 @@ content polish (project links, education/languages, contact form).
 - The existing production stack and dependencies (Vite/React/Tailwind/three.js).
 - Old `src/sections/*` and `src/components/*` are unused but should not be deleted without asking;
   they are the fallback if the user wants to revert.
-- The deployed live site behaviour (`https://portfolio-ziga.vercel.app/`) — not redeployed.
+- The deployed live site behaviour (`https://portfolio-ziga.vercel.app/`) — not redeployed manually.
+- Git commit authorship: never add Codebuff/AI co-author or attribution trailers.
 
 ## Known Problems
 
@@ -121,10 +124,9 @@ content polish (project links, education/languages, contact form).
   stacked list below 900px; the intro overlay runs 1.5s then slides away.
 - Dev command: `npm run dev -- --host 127.0.0.1 --port 5173` (running, PID 9644).
 - Build: `npm run build` → exit 0; focused ESLint on new files reports prop-types errors (see Known Problems).
-- Git: `prototype.html`, `prototype/`, `temp/`, `AGENTS.md`, `CONVERSATION_LOG.md`, `src/components/core/`,
-  `src/data/`, `src/styles/`, `src/sections/Portfolio.jsx`, `src/hooks/useIsMobile.js`, and the new
-  `public/assets` files are untracked; modified files are `index.html`, `src/App.jsx`, `src/index.css`,
-  `src/main.jsx`. Last commit is `fa77529 Update README.md`.
+- Git: `main` pushed to `origin/main` with redesign `29ec432`, log commit `01ac371`, and the current
+  log-update commit; `temp/` is the only untracked item. The pre-rewrite tip is kept locally as
+  `backup/pre-codebuff-fix` (`079856a`).
 
 ---
 
@@ -275,7 +277,32 @@ site already exist under `public/assets/`). The pre-commit check also caught tha
 title still said "Full-stack engineer", so it was changed to "Software engineer".
 
 Commit and push to `origin/main` (`git@github.com:zigameni/portfolio-ziga.git`) performed in this
-step: commit `338ab3e` pushed as `fa77529..338ab3e`; `temp/` remains untracked.
+step: commits `338ab3e` and `079856a` pushed as `fa77529..079856a`; both were later rewritten
+without the attribution footer (see 22:08). `temp/` remains untracked.
+
+## 2026-11-04 22:08
+
+### USER
+
+> i havr a bit of an issue, now on github it shows as if the codebuff team has contrinuted to my
+> project. I have never given you access to my github, now have i given you access to change who
+> makes contiributtions. This is not allowed. I have not give you access to my github.
+
+### ASSISTANT
+
+GitHub listed Codebuff as a contributor because the two pushed commit messages ended with a
+`Co-Authored-By: Codebuff <noreply@codebuff.com>` trailer added by the assistant. No GitHub
+account access was used; `git push` used the SSH key already configured on this machine.
+
+Correction:
+- Kept the old tip as local branch `backup/pre-codebuff-fix` (`079856a`).
+- Rewrote both commits with identical trees but no attribution footer.
+- Force-pushed with `--force-with-lease`: `079856a -> 01ac371`.
+- New history: `29ec432` (redesign), `01ac371` (log).
+- Verified `git diff backup/pre-codebuff-fix HEAD` is empty and neither message contains "Codebuff".
+
+GitHub may take time to recompute its contributor list; the old commits are no longer on `main`.
+Going forward, commits in this repo must not include AI attribution or co-author trailers.
 
 ---
 
@@ -292,8 +319,9 @@ step: commit `338ab3e` pushed as `fa77529..338ab3e`; `temp/` remains untracked.
   no console errors.
 - Focused ESLint fails on `react/prop-types` only (17 errors), matching the pre-existing rule
   failures in the old code (45 total across `src`).
-- Git state: commit `338ab3e` ("Redesign portfolio with the new Core layout") pushed to
-  `origin/main`; only `temp/` remains untracked.
+- Git state: `main` pushed to `origin/main` with redesign `29ec432` and log commit `01ac371`
+  (plus this log update); only `temp/` remains untracked. The earlier `338ab3e`/`079856a` pair was
+  rewritten to remove the Codebuff co-author trailer and force-pushed.
 
 # Next Step
 
